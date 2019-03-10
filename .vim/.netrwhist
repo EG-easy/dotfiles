@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/shizuka/neoJPbook/articles'
-let g:netrw_dirhist_2='/Users/shizuka/go'
-let g:netrw_dirhist_3='/Users/shizuka/go/pkg'
-let g:netrw_dirhist_4='/Users/shizuka/go'
-let g:netrw_dirhist_5='/Users/shizuka/go/pkg'
-let g:netrw_dirhist_6='/Users/shizuka/go/pkg/darwin_amd64'
-let g:netrw_dirhist_7='/Users/shizuka/go/pkg/darwin_amd64/golang.org'
