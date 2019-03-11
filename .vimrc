@@ -49,15 +49,30 @@ imap " ""<LEFT>
 """"""""""""""""""""""""""""""
 " deinで入れたパッケージの設定
 """"""""""""""""""""""""""""""
-"airline setting
+
+"===== airline setting =====
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-" let g:airline_theme = 'molokai'
+let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
 "NERDTree setting
 "let NERDTreeShowHidden=1
+
+"===== "vim-go setting =====
+"syntax highlighting
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 1
+" auto formatting
+let g:go_fmt_command = "goimports"
+" err syntax highting
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
 
 """"""""""""""""""""""""""""""
 " dein本体の設定
