@@ -43,8 +43,6 @@ set encoding=utf-8
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
-imap ' ''<LEFT>
-imap " ""<LEFT>
 
 """"""""""""""""""""""""""""""
 " deinで入れたパッケージの設定
