@@ -8,9 +8,6 @@ repo = 'tomlion/vim-solidity'
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
-repo = 'fatih/vim-go'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 
@@ -22,3 +19,6 @@ repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'

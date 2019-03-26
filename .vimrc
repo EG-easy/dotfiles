@@ -72,6 +72,9 @@ let g:go_fmt_command = "goimports"
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
 
+"===== "indentLine setting =====
+let g:indentLine_char = '¦'
+
 """"""""""""""""""""""""""""""
 " dein本体の設定
 """"""""""""""""""""""""""""""
