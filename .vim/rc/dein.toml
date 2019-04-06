@@ -2,6 +2,12 @@
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+[[plugins]]
 repo = 'tomlion/vim-solidity'
 
 [[plugins]]

@@ -44,6 +44,10 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
+"undoを永続化
+set undofile
+set undodir=~/.vim/tem
+
 """"""""""""""""""""""""""""""
 " deinで入れたパッケージの設定
 """"""""""""""""""""""""""""""
@@ -55,8 +59,17 @@ let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
-"NERDTree setting
+"===== "NERDTree setting =====
 "let NERDTreeShowHidden=1
+let g:NERDTreeLimitedSyntax = 1
+let g:NERDTreeDirArrows = 1
+
+" dir-icons
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+let g:DevIconsDefaultFolderOpenSymbol = ''
+highlight! link NERDTreeFlags NERDTreeDir
 
 "===== "vim-go setting =====
 "syntax highlighting
@@ -75,6 +88,12 @@ autocmd FileType go :match goErr /\<err\>/
 "===== "indentLine setting =====
 let g:indentLine_char = '¦'
 
+
+
+""""""""""""""""""""""""""""""
+" key bindings
+""""""""""""""""""""""""""""""
+map <C-e> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""
 " dein本体の設定
 """"""""""""""""""""""""""""""
