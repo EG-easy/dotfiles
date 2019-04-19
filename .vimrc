@@ -1,6 +1,5 @@
 """"""""""""""""""""""""""""""
-" vim基本設定
-""""""""""""""""""""""""""""""
+" vim基本設定 """"""""""""""""""""""""""""""
 "===== 表示設定 =====
 set number "行番号の表示
 set title "編集中ファイル名の表示
@@ -20,6 +19,7 @@ set shiftwidth=2 "自動的に入力されたインデントの空白を2つ分�
 set whichwrap=b,s,h,l,<,>,[,],~ "行頭、行末で行のカーソル移動を可能にする
 set backspace=indent,eol,start "バックスペースでの行移動を可能にする
 let &t_ti.="\e[5 q" "カーソルの形状を変更
+set cursorline "現在のカーソル行を強調
 
 "===== 検索設定 =====
 set ignorecase "大文字、小文字の区別をしない
@@ -41,6 +41,14 @@ set encoding=utf-8
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+
+" undo 永続化
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
+
+set undolevels=1000
 
 
 """"""""""""""""""""""""""""""
@@ -156,5 +164,10 @@ let g:indentLine_char = '¦'
 """"""""""""""""""""""""""""""
 " key bindings
 """"""""""""""""""""""""""""""
+let mapleader = "\<Space>"
+nnoremap <Leader>. :e ~/.vimrc<CR>
 map <C-e> :NERDTreeToggle<CR>
+nnoremap <Esc><Esc> :nohlsearch<CR>
+nnoremap <C-j> }
+nnoremap <C-k> {
 
