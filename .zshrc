@@ -15,7 +15,45 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 autoload -Uz colors
 colors
 
-PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
+# PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
 alias ls='ls -G'
-export LSCOLORS=gxfxcxdxbxegedabagacad
+# export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
+
+
+#golang
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+export GOBIN=$GOPATH/bin
+#node
+export PATH=$PATH:/Users/shizuka/.nodebrew/current/bin
+
+#node_modules
+export NODE_PATH=/usr/local/lib/node_modules
+
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+#powerline-go
+function powerline_precmd() {
+    eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -eval -modules "venv,ssh,cwd,perms,gitlite,hg,jobs,exit,root,vgo" -modules-right "time")"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
