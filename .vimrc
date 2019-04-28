@@ -109,3 +109,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <C-j> }
 nnoremap <C-k> {
 
+"run file
+au FileType go nmap <silent> <leader>r <Plug>(go-run)
+au FileType python nmap <buffer> <leader>r :!python %<CR>
