@@ -37,11 +37,6 @@ set t_Co=256
 set clipboard+=unnamed
 set encoding=utf-8
 
-" 自動的に閉じ括弧を入力
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
-
 " undo 永続化
 if has('persistent_undo')
   set undodir=~/.vim/undo
