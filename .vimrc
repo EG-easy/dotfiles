@@ -104,6 +104,21 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <C-j> }
 nnoremap <C-k> {
 
-"run file
+"golang
 au FileType go nmap <silent> <leader>r <Plug>(go-run)
+au FileType go nmap <silent> <leader>f  :GoReferrers<CR>
+au FileType go nmap <silent> <leader>ie :GoIfErr<CR>
+au FileType go nmap <silent> <leader>at :GoAddTags<CR>
+
+"python
 au FileType python nmap <buffer> <leader>r :!python %<CR>
+
+"markdown plugin setting
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+nnoremap <silent> <leader>o :<C-u>PrevimOpen<CR>
+nnoremap <silent> <leader>r :call previm#refresh()<CR>
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>

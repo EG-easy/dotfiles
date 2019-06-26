@@ -67,7 +67,6 @@ hook_add = '''
 let g:indentLine_char = '¦'
 '''
 
-
 [[plugins]]
 repo = 'cohama/lexima.vim'
 
@@ -76,3 +75,4 @@ repo = 'simeji/winresizer'
 hook_add = '''
 let g:winresizer_start_key = '<Leader>s'
 '''
+

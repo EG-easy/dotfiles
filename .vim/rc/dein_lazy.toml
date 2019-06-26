@@ -21,3 +21,18 @@ autocmd FileType go :match goErr /\<err\>/
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['md']
+# hook_add = '''
+# let g:vim_markdown_folding_disabled = 1
+# '''
+
+[[plugins]]
+repo = 'previm/previm'
+on_ft = ['md']
+hook_add = '''
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+'''
+

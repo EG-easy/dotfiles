@@ -19,6 +19,7 @@ colors
 alias ls='ls -G'
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
+alias votum='cd ~/go/src/github.com/EG-easy/votumchain/'
 
 
 #golang
