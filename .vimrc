@@ -98,7 +98,8 @@ endif
 " key bindings
 """"""""""""""""""""""""""""""
 let mapleader = "\<Space>"
-nnoremap <Leader>. :e ~/.vimrc<CR>
+nnoremap <Leader>. :e ~/.dotfiles/.vimrc<CR>
+nnoremap <Leader>/ :e ~/.dotfiles/.vim/rc<CR>
 map <C-e> :NERDTreeToggle<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <C-j> }
@@ -112,6 +113,9 @@ au FileType go nmap <silent> <leader>at :GoAddTags<CR>
 
 "python
 au FileType python nmap <buffer> <leader>r :!python %<CR>
+
+"C++
+au FileType cpp nmap <buffer> <leader>r :!g++ % -o %<.exe && ./%<.exe<CR>
 
 "markdown plugin setting
 autocmd BufRead,BufNewFile *.md set filetype=markdown

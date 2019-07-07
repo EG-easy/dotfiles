@@ -36,3 +36,24 @@ hook_add = '''
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 '''
 
+[[plugins]]
+repo = 'justmao945/vim-clang'
+on_ft = ['cpp']
+hook_add = '''
+let g:clang_format_auto = 1
+let g:clang_format_style = 'Google'
+let g:clang_check_syntax_auto = 1
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+on_ft = ['cpp']
+hook_add = '''
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "BreakBeforeBraces" : "Stroustrup"}
+'''
+
