@@ -45,6 +45,13 @@ endif
 
 set undolevels=1000
 
+" ctagsの設定
+set fileformats=unix,dos,mac
+set fileencodings=utf-8,sjis
+set tags=./.tags;
+set complete-=i   " disable scanning included files
+set complete-=t   " disable searching tags
+
 
 """"""""""""""""""""""""""""""
 " dein本体の設定
@@ -126,3 +133,4 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+

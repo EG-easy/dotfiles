@@ -21,12 +21,20 @@ alias ls='ls -G'
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
 alias votum='cd ~/go/src/github.com/EG-easy/votumchain/'
 
+# ctag
+alias tag='ctags -R -f .tags'
+
+
+#c-lang
+export PATH=$PATH:/usr/local/bin
 
 #golang
 export PATH="$PATH:/usr/local/go/bin"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export GOBIN=$GOPATH/bin
+export GO111MODULE=on
+
 #node
 export PATH=$PATH:/Users/shizuka/.nodebrew/current/bin
 
