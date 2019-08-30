@@ -152,6 +152,7 @@ module.exports = {
 		"hyper-snazzy",
 		"hyper-search",
 		"hypercwd",
+		"hyper-tab-icons",
 	],
 
   // in development, you can create a directory under

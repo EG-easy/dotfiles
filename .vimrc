@@ -33,8 +33,11 @@ set ttymouse=xterm2
 set notitle
 
 "カラースキーマの適用
+"background color 
+autocmd ColorScheme * highlight Normal ctermbg=234
 colorscheme molokai
-"colorscheme snazzy
+
+
 
 set t_Co=256
 

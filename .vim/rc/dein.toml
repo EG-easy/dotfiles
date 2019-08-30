@@ -33,11 +33,9 @@ let g:DevIconsDefaultFolderOpenSymbol = ''
 highlight! link NERDTreeFlags NERDTreeDir
 '''
 
-[[plugins]]
-repo = 'tomlion/vim-solidity'
 
-[[plugins]]
-repo = 'tomtom/tcomment_vim'
+#[[plugins]]
+#repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
