@@ -30,8 +30,12 @@ set incsearch "インクリメンタルサーチを有効にする "===== マウ
 set mouse=a
 set ttymouse=xterm2
 
+set notitle
+
 "カラースキーマの適用
 colorscheme molokai
+"colorscheme snazzy
+
 set t_Co=256
 
 set clipboard+=unnamed
@@ -133,4 +137,12 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" vimgrep
+nnoremap [q :cprevious<CR>   " 前へ
+nnoremap ]q :cnext<CR>       " 次へ
+nnoremap [Q :<C-u>cfirst<CR> " 最初へ
+nnoremap ]Q :<C-u>clast<CR>  " 最後へ
+autocmd QuickFixCmdPost *grep* cwindow
+
 

@@ -2,7 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -v
+bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/shizuka/.zshrc'
@@ -15,7 +15,8 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 autoload -Uz colors
 colors
 
-# PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
+#PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
+PROMPT="%{$fg[green]%}%D{%T} % %""% " 
 alias ls='ls -G'
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
@@ -49,20 +50,20 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 #powerline-go
-function powerline_precmd() {
-    eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -eval -modules "venv,ssh,cwd,perms,gitlite,hg,jobs,exit,root,vgo" -modules-right "time")"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
-
+# function powerline_precmd() {
+#     eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -eval -modules "venv,ssh,cwd,perms,gitlite,hg,jobs,exit,root,vgo" -modules-right "time")"
+# }
+#
+# function install_powerline_precmd() {
+#   for s in "${precmd_functions[@]}"; do
+#     if [ "$s" = "powerline_precmd" ]; then
+#       return
+#     fi
+#   done
+#   precmd_functions+=(powerline_precmd)
+# }
+#
+# if [ "$TERM" != "linux" ]; then
+#     install_powerline_precmd
+# fi
+#
