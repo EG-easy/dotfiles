@@ -16,7 +16,7 @@ autoload -Uz colors
 colors
 
 #PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
-PROMPT="%{$fg[green]%}%D{%T} % %""% " 
+PROMPT="%{$fg[green]%}%D{%T} % $ ""% " 
 alias ls='ls -G'
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
@@ -49,6 +49,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# hyper shell icon setting
 # Override auto-title when static titles are desired ($ title My new title)
 title() { export TITLE_OVERRIDDEN=1; echo -en "\e]0;$*\a"}
 # Turn off static titles ($ autotitle)
