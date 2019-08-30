@@ -5,8 +5,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/shizuka/.zshrc'
-
+zstyle :compinstall filename '/Users/shizuka/.zshrc' 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -15,8 +14,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 autoload -Uz colors
 colors
 
+#PROMPT="%{$fg[green]%} %~$ %{${reset_color}%}" 
 #PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
-PROMPT="%{$fg[green]%}%D{%T} % $ ""% " 
+#PROMPT="%{$fg[green]%}%D{%T} % $ ""% " 
 alias ls='ls -G'
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
@@ -49,6 +49,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# start tmux with zsh 
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
 # hyper shell icon setting
 # Override auto-title when static titles are desired ($ title My new title)
 title() { export TITLE_OVERRIDDEN=1; echo -en "\e]0;$*\a"}
@@ -77,6 +80,31 @@ tabtitle_preexec() {
 [[ -z $preexec_functions ]] && preexec_functions=()
 preexec_functions=($preexec_functions tabtitle_preexec)
 
+
+# promt setting
+autoload -Uz vcs_info
+autoload -Uz colors # black red green yellow blue magenta cyan white
+colors
+# PROMPT変数内で変数参照
+setopt prompt_subst
+
+zstyle ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
+zstyle ':vcs_info:git:*' stagedstr "%F{green}!" #commit されていないファイルがある
+zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+" #add されていないファイルがある
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f" #通常
+zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリクト等 formats 外の表示
+	
+	 # %b ブランチ情報
+	 # %a アクション名(mergeなど)
+	 # %c changes
+	 # %u uncommit
+	
+# プロンプト表示直前に vcs_info 呼び出し
+precmd () {vcs_info}
+	
+PROMPT='%{$fg[green] %~%}%{$reset_color%}'
+PROMPT=$PROMPT'${vcs_info_msg_0_}%{${fg[red]}%}%}$%{${reset_color}%} '
+
 #powerline-go
 # function powerline_precmd() {
 #     eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -eval -modules "venv,ssh,cwd,perms,gitlite,hg,jobs,exit,root,vgo" -modules-right "time")"
@@ -94,4 +122,3 @@ preexec_functions=($preexec_functions tabtitle_preexec)
 # if [ "$TERM" != "linux" ]; then
 #     install_powerline_precmd
 # fi
-#
