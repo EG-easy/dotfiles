@@ -33,7 +33,7 @@ set ttymouse=xterm2
 set notitle
 
 "カラースキーマの適用
-"background color 
+"background color
 autocmd ColorScheme * highlight Normal ctermbg=234
 colorscheme molokai
 
@@ -148,4 +148,13 @@ nnoremap [Q :<C-u>cfirst<CR> " 最初へ
 nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 autocmd QuickFixCmdPost *grep* cwindow
 
+augroup MyAutoCmd
+    "保存時に行末スペースを取り除く
+    autocmd BufWritePre * %s/\s\+$//e
+    "ファイル指定無しでvimを開いたらNerdTreeを開く
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+augroup END
+
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 
