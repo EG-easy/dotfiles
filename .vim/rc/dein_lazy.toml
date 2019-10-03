@@ -2,7 +2,9 @@
 repo = "davidhalter/jedi-vim"
 on_ft = ['python']
 
-[[plugins]] repo = 'lambdalisue/vim-pyenv' on_ft = ['python']
+[[plugins]]
+repo = 'lambdalisue/vim-pyenv'
+on_ft = ['python']
 
 
 [[plugins]]
@@ -72,13 +74,5 @@ on_ft = ['tf']
 hook_add = '''
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
-'''
-
-[[plugins]]
-repo = 'hashivim/vim-terraform'
-on_ft = ['tf']
-hook_add = '''
-let g:terraform_completion_keys = 1
-let g:terraform_registry_module_completion = 0
 '''
 

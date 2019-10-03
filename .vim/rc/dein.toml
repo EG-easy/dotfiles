@@ -78,3 +78,6 @@ hook_add = '''
 let g:winresizer_start_key = '<Leader>s'
 '''
 
+[[plugins]]
+repo = 'lervag/vimtex'
+

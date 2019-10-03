@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/shizuka/.zshrc' 
+zstyle :compinstall filename '/Users/shizuka/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -14,9 +14,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 autoload -Uz colors
 colors
 
-#PROMPT="%{$fg[green]%} %~$ %{${reset_color}%}" 
-#PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}" 
-#PROMPT="%{$fg[green]%}%D{%T} % $ ""% " 
+#PROMPT="%{$fg[green]%} %~$ %{${reset_color}%}"
+#PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}"
+#PROMPT="%{$fg[green]%}%D{%T} % $ ""% "
 alias ls='ls -G'
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
@@ -49,7 +49,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# start tmux with zsh 
+# start tmux with zsh
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 
 # hyper shell icon setting
@@ -93,17 +93,21 @@ zstyle ':vcs_info:git:*' stagedstr "%F{green}!" #commit されていないファ
 zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+" #add されていないファイルがある
 zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f" #通常
 zstyle ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリクト等 formats 外の表示
-	
+
 	 # %b ブランチ情報
 	 # %a アクション名(mergeなど)
 	 # %c changes
 	 # %u uncommit
-	
+
 # プロンプト表示直前に vcs_info 呼び出し
 precmd () {vcs_info}
-	
+
 PROMPT='%{$fg[green] %~%}%{$reset_color%}'
 PROMPT=$PROMPT'${vcs_info_msg_0_}%{${fg[red]}%}%}$%{${reset_color}%} '
+
+
+#.DS_Store削除
+alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
 #powerline-go
 # function powerline_precmd() {
