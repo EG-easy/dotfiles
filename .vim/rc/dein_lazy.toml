@@ -76,3 +76,11 @@ let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 '''
 
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html']
+
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
