@@ -34,10 +34,6 @@ highlight! link NERDTreeFlags NERDTreeDir
 '''
 
 #[[plugins]]
-#repo = 'tomlion/vim-solidity'
-
-
-#[[plugins]]
 #repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
@@ -81,3 +77,18 @@ let g:winresizer_start_key = '<Leader>s'
 [[plugins]]
 repo = 'lervag/vimtex'
 
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+'''

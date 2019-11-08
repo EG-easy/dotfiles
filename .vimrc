@@ -118,6 +118,10 @@ map <C-e> :NERDTreeToggle<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <C-j> }
 nnoremap <C-k> {
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 
 "golang
 au FileType go nmap <silent> <leader>r <Plug>(go-run)
@@ -127,7 +131,17 @@ au FileType go nmap <silent> <leader>at :GoAddTags<CR>
 
 "python
 au FileType python nmap <buffer> <leader>r :!python %<CR>
+autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
 
+"vim-lsp
+augroup PylsCommands
+    autocmd!
+		autocmd FileType python setlocal omnifunc=lsp#complete  " オムニ補完を有効化
+    autocmd FileType python nnoremap <buffer> gd :<C-u>LspDefinition<CR>
+    autocmd FileType python nnoremap K :<C-u>LspHover<CR>
+    autocmd FileType python nnoremap <LocalLeader>R :<C-u>LspRename<CR>
+    autocmd FileType python nnoremap <LocalLeader>n :<C-u>LspReferences<CR>
+augroup END
 "C++
 au FileType cpp nmap <buffer> <leader>r :!g++ % -o %<.exe && ./%<.exe<CR>
 
