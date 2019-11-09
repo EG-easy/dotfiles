@@ -131,7 +131,7 @@ au FileType go nmap <silent> <leader>at :GoAddTags<CR>
 
 "python
 au FileType python nmap <buffer> <leader>r :!python %<CR>
-autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
+autocmd FileType python nnoremap <buffer> <c-f> :0,$!yapf<Cr>
 
 "vim-lsp
 augroup PylsCommands
