@@ -150,11 +150,6 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 nnoremap <silent> <leader>o :<C-u>PrevimOpen<CR>
 nnoremap <silent> <leader>r :call previm#refresh()<CR>
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 " vimgrep
 nnoremap [q :cprevious<CR>   " 前へ
 nnoremap ]q :cnext<CR>       " 次へ

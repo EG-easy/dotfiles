@@ -109,6 +109,12 @@ PROMPT=$PROMPT'${vcs_info_msg_0_}%{${fg[red]}%}%}$%{${reset_color}%} '
 #.DS_Store削除
 alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
+# dockerの一括削除
+alias docker-purge='docker stop $(docker ps -q) && docker rmi $(docker images -q) -f'
+
+#php7.2 PATH
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 #powerline-go
 # function powerline_precmd() {
 #     eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -eval -modules "venv,ssh,cwd,perms,gitlite,hg,jobs,exit,root,vgo" -modules-right "time")"
@@ -126,3 +132,4 @@ alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 # if [ "$TERM" != "linux" ]; then
 #     install_powerline_precmd
 # fi
+#
