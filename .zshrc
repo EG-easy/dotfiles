@@ -110,7 +110,7 @@ PROMPT=$PROMPT'${vcs_info_msg_0_}%{${fg[red]}%}%}$%{${reset_color}%} '
 alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
 # dockerの一括削除
-alias docker-purge='docker stop $(docker ps -q) && docker rmi $(docker images -q) -f'
+alias docker-purge='docker rm $(docker ps -q -a) && docker rmi $(docker images -q) -f'
 
 #php7.2 PATH
 export PATH="/usr/local/opt/php@7.2/bin:$PATH"

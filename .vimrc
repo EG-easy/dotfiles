@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""
 " vim基本設定 """"""""""""""""""""""""""""""
 "===== 表示設定 =====
-set number "行番号の表示
+"set number "行番号の表示
 set title "編集中ファイル名の表示
 set showmatch "括弧入力時に対応する括弧を示す
 " set list "タブ、空白、改行を可視化
@@ -163,4 +163,16 @@ augroup MyAutoCmd
     "ファイル指定無しでvimを開いたらNerdTreeを開く
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 augroup END
+
+" IMF OFF on Mac
+if has('mac')
+  set ttimeoutlen=1
+  let g:imeoff = 'osascript -e "tell application \"System Events\" to key code 102"'
+  augroup MyIMEGroup
+    autocmd!
+    autocmd InsertLeave * :call system(g:imeoff)
+  augroup END
+  noremap <silent> <ESC> <ESC>:call system(g:imeoff)<CR>
+endif
+
 
