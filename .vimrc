@@ -112,8 +112,8 @@ endif
 " key bindings
 """"""""""""""""""""""""""""""
 let mapleader = "\<Space>"
-nnoremap <Leader>. :e ~/.dotfiles/.vimrc<CR>
-nnoremap <Leader>/ :e ~/.dotfiles/.vim/rc<CR>
+nnoremap <Leader>. :e ~/dotfiles/.vimrc<CR>
+nnoremap <Leader>/ :e ~/dotfiles/.vim/rc<CR>
 map <C-e> :NERDTreeToggle<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <C-j> }
