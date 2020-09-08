@@ -54,7 +54,7 @@ set undolevels=1000
 
 " ctagsの設定
 set fileformats=unix,dos,mac
-set fileencodings=utf-8,sjis
+set fileencodings=euc-jp,utf-8,sjis
 set tags=./.tags;
 set complete-=i   " disable scanning included files
 set complete-=t   " disable searching tags
@@ -175,4 +175,6 @@ augroup END
 "  noremap <silent> <ESC> <ESC>:call system(g:imeoff)<CR>
 "endif
 
+"vim-tex
+let g:tex_flavor = 'tex'
 
