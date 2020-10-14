@@ -2,7 +2,6 @@
 repo = 'scrooloose/nerdtree'
 hook_add = '''
 let g:NERDTreeLimitedSyntax = 1
-let g:NERDTreeDirArrows = 1
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
@@ -22,10 +21,11 @@ call NERDTreeHighlightFile('sql', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('sol', 'green', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('go', 'blue', 'none', '#3366FF', '#151515')
 '''
+
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
-
 hook_add = '''
+let g:NERDTreeDirArrows = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
