@@ -175,4 +175,6 @@ augroup END
 "  noremap <silent> <ESC> <ESC>:call system(g:imeoff)<CR>
 "endif
 
+"vim-tex
+let g:tex_flavor = 'tex'
 
