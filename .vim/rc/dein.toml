@@ -92,6 +92,8 @@ if executable('pyls')
         \ })
 endif
 '''
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'maksimr/vim-jsbeautify'
