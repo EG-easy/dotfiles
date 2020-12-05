@@ -59,6 +59,9 @@ repo = 'w0rp/ale'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
+repo = 'rbong/vim-flog'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = '''
 let g:indentLine_char = '¦'
