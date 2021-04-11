@@ -85,20 +85,6 @@ repo = 'lervag/vimtex'
 repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-if executable('pyls')
-    au user lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-'''
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-
-[[plugins]]
 repo = 'maksimr/vim-jsbeautify'
 hook_add = '''
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -113,3 +99,13 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 [[plugins]]
 repo = 'ayatosuzuki/yomuzen-vim'
+
+[[plugins]]
+repo  = 'TovarishFin/vim-solidity'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+build = '''
+  git checkout release
+'''

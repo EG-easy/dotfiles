@@ -93,6 +93,7 @@ if dein#load_state(s:dein_dir)
  "遅延読み込みしたいプラグイン群
   call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
 
+	call dein#add('TovarishFin/vim-solidity')
   call dein#end()
   call dein#save_state()
 endif
@@ -133,15 +134,6 @@ au FileType go nmap <silent> <leader>at :GoAddTags<CR>
 au FileType python nmap <buffer> <leader>r :!python %<CR>
 autocmd FileType python nnoremap <buffer> <c-f> :0,$!yapf<Cr>
 
-"vim-lsp
-augroup PylsCommands
-    autocmd!
-		autocmd FileType python setlocal omnifunc=lsp#complete  " オムニ補完を有効化
-    autocmd FileType python nnoremap <buffer> gd :<C-u>LspDefinition<CR>
-    autocmd FileType python nnoremap K :<C-u>LspHover<CR>
-    autocmd FileType python nnoremap <LocalLeader>R :<C-u>LspRename<CR>
-    autocmd FileType python nnoremap <LocalLeader>n :<C-u>LspReferences<CR>
-augroup END
 "C++
 au FileType cpp nmap <buffer> <leader>r :!g++ % -o %<.exe && ./%<.exe<CR>
 
@@ -164,17 +156,7 @@ augroup MyAutoCmd
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 augroup END
 
-" IMF OFF on Mac
-"if has('mac')
-"  set ttimeoutlen=1
-"  let g:imeoff = 'osascript -e "tell application \"System Events\" to key code 102"'
-"  augroup MyIMEGroup
-"    autocmd!
-"    autocmd InsertLeave * :call system(g:imeoff)
-"  augroup END
-"  noremap <silent> <ESC> <ESC>:call system(g:imeoff)<CR>
-"endif
-
 "vim-tex
 let g:tex_flavor = 'tex'
+
 

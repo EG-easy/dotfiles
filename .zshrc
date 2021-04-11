@@ -18,7 +18,7 @@ colors
 #PROMPT="%{$fg[green]%}%D{%T}%  %~$ %{${reset_color}%}"
 #PROMPT="%{$fg[green]%}%D{%T} % $ ""% "
 alias ls='ls -G'
-# export LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOLORS=gxfxcxdxbxegedabagacad
 alias molpath='cd ~/go/src/github.com/moldcoin/moldex/'
 alias votum='cd ~/go/src/github.com/EG-easy/votumchain/'
 
@@ -133,3 +133,4 @@ export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 #     install_powerline_precmd
 # fi
 #
+
