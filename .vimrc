@@ -1,6 +1,4 @@
 """"""""""""""""""""""""""""""
-" vim基本設定 """"""""""""""""""""""""""""""
-"===== 表示設定 =====
 set number "行番号の表示
 set title "編集中ファイル名の表示
 set showmatch "括弧入力時に対応する括弧を示す
@@ -138,9 +136,7 @@ autocmd FileType python nnoremap <buffer> <c-f> :0,$!yapf<Cr>
 au FileType cpp nmap <buffer> <leader>r :!g++ % -o %<.exe && ./%<.exe<CR>
 
 "markdown plugin setting
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-nnoremap <silent> <leader>o :<C-u>PrevimOpen<CR>
-nnoremap <silent> <leader>r :call previm#refresh()<CR>
+nnoremap <silent> <leader>o :MarkdownPreview<CR>
 
 " vimgrep
 nnoremap [q :cprevious<CR>   " 前へ
