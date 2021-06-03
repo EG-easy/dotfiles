@@ -156,3 +156,7 @@ augroup END
 let g:tex_flavor = 'tex'
 
 
+"coc.nvim
+nmap <silent> <space>df <Plug>(coc-definition)
+nmap <silent> <space>fmt <Plug>(coc-format)
+let g:coc_node_path = '~/.nvm/versions/node/v14.13.1/bin/node'
