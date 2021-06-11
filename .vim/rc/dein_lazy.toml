@@ -74,7 +74,7 @@ build = 'sh -c "cd app && yarn install"'
 
 [[plugins]]
 repo  = 'rust-lang/rust.vim'
-on_ft = ['rs']
+on_ft = ['rust']
 hook_add = '''
 let g:rustfmt_autosave = 1
 '''
