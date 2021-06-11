@@ -71,3 +71,10 @@ build = 'composer install'
 repo  = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown']
 build = 'sh -c "cd app && yarn install"'
+
+[[plugins]]
+repo  = 'rust-lang/rust.vim'
+on_ft = ['rs']
+hook_add = '''
+let g:rustfmt_autosave = 1
+'''
