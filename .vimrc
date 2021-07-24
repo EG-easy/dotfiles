@@ -30,6 +30,9 @@ set incsearch "インクリメンタルサーチを有効にする "===== マウ
 set mouse=a
 set ttymouse=xterm2
 
+"vimgrep ignore setting
+set wildignore=*/node_modules/*,*/target/*,*/tmp/*,*/dist/*,*/vendor/*,*/build/*
+
 set notitle
 
 "カラースキーマの適用
