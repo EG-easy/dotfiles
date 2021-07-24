@@ -26,18 +26,6 @@ on_ft = ['sol']
 
 
 [[plugins]]
-repo = 'plasticboy/vim-markdown'
-on_ft = ['md']
-
-
-[[plugins]]
-repo = 'previm/previm'
-on_ft = ['md']
-hook_add = '''
-let g:previm_open_cmd = 'open -a Google\ Chrome'
-'''
-
-[[plugins]]
 repo = 'justmao945/vim-clang'
 on_ft = ['cpp']
 hook_add = '''
@@ -79,4 +67,14 @@ repo  = 'phpactor/phpactor'
 on_ft = ['php']
 build = 'composer install'
 
+[[plugins]]
+repo  = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown']
+build = 'sh -c "cd app && yarn install"'
 
+[[plugins]]
+repo  = 'rust-lang/rust.vim'
+on_ft = ['rust']
+hook_add = '''
+let g:rustfmt_autosave = 1
+'''
