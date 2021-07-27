@@ -101,9 +101,6 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 repo = 'ayatosuzuki/yomuzen-vim'
 
 [[plugins]]
-repo  = 'TovarishFin/vim-solidity'
-
-[[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 build = '''

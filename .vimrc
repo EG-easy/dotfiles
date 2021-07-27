@@ -94,7 +94,6 @@ if dein#load_state(s:dein_dir)
  "遅延読み込みしたいプラグイン群
   call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
 
-	call dein#add('TovarishFin/vim-solidity')
   call dein#end()
   call dein#save_state()
 endif
@@ -162,4 +161,4 @@ let g:tex_flavor = 'tex'
 "coc.nvim
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <space>fmt <Plug>(coc-format)
-let g:coc_node_path = '~/.nvm/versions/node/v14.13.1/bin/node'
+let g:coc_node_path = '~/.nvm/versions/node/v14.17.3/bin/node'
