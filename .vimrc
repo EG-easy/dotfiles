@@ -25,7 +25,7 @@ set smartcase "大文字が含まれている場合は区別する
 set wrapscan "検索時に最後まで行ったら最初に戻る
 set hlsearch "検索した文字を強調
 set incsearch "インクリメンタルサーチを有効にする "===== マウス設定 =====
-set mouse=a
+set mouse-=a
 set ttymouse=xterm2
 
 "vimgrep ignore setting
@@ -42,7 +42,7 @@ colorscheme molokai
 
 set t_Co=256
 
-set clipboard+=unnamed
+set clipboard=unnamed,autoselect
 set encoding=utf-8
 
 " undo 永続化
