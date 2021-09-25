@@ -35,9 +35,22 @@ set notitle
 
 "カラースキーマの適用
 "background color
-autocmd ColorScheme * highlight Normal ctermbg=234
-colorscheme molokai
-
+"autocmd ColorScheme * highlight Normal ctermbg=234
+let s:colorschemename =  'onehalfdark'
+let s:colorschemeURL =  'https://raw.githubusercontent.com/sonph/onehalf/master/vim/colors/onehalfdark.vim'
+let s:vimdir = $HOME . '/.vim'
+if ! filereadable(s:vimdir . '/colors/'.s:colorschemename.'.vim')
+    if executable('curl') && confirm('Prepare '.s:colorschemename.' form github?', "Yes\nNo", 2) == 1
+        echo 'Ok, now installing '.s:colorschemename
+	call system('mkdir ' . s:vimdir . '/colors')
+	call system('curl '.s:colorschemeURL.'  > ' . s:vimdir . '/colors/'.s:colorschemename.'.vim')
+        execute 'colorscheme ' . s:colorschemename
+    else
+        echo s:colorschemename.' is not installed'
+    endif
+else
+    execute 'colorscheme ' . s:colorschemename
+endif
 
 
 set t_Co=256

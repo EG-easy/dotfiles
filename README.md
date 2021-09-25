@@ -22,11 +22,18 @@ make deploy
 :call dein#update()
 ```
 
+## Change Color Scheme
+Set below values in `.vimrc`
+
+```vim
+let s:colorschemename =  ''
+let s:colorschemeURL =  ''
+```
 
 ## troubleShooting
 
 ### MarkdownPreivew
-```
+```vim
 :call mkdp#util#install()
 ```
 ref: https://github.com/iamcco/markdown-preview.nvim/issues/43
