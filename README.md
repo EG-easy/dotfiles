@@ -21,3 +21,12 @@ make deploy
 ```vim
 :call dein#update()
 ```
+
+
+## troubleShooting
+
+### MarkdownPreivew
+```
+:call mkdp#util#install()
+```
+ref: https://github.com/iamcco/markdown-preview.nvim/issues/43
