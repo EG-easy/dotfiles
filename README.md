@@ -30,6 +30,14 @@ let s:colorschemename =  ''
 let s:colorschemeURL =  ''
 ```
 
+## LSP Setting
+install javascript/typescript language server with coc.
+```
+:CocInstall coc-tsserver
+```
+
+ref: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
+
 ## troubleShooting
 
 ### MarkdownPreivew
@@ -37,3 +45,4 @@ let s:colorschemeURL =  ''
 :call mkdp#util#install()
 ```
 ref: https://github.com/iamcco/markdown-preview.nvim/issues/43
+
