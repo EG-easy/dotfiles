@@ -30,7 +30,7 @@ set mouse-=a
 set ttymouse=xterm2
 
 "vimgrep ignore setting
-set wildignore=*/node_modules/*,*/target/*,*/tmp/*,*/dist/*,*/vendor/*,*/build/*
+set wildignore=*/node_modules/*,*/target/*,*/tmp/*,*/dist/*,*/vendor/*,*/build/*,*/public/*,*/storage/*
 
 set notitle
 
