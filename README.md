@@ -6,7 +6,7 @@
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
-nvm install v14.17.3
+nvm install v14.18.1
 ```
 
 ## How To Start
