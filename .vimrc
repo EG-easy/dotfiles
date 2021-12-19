@@ -176,3 +176,6 @@ let g:tex_flavor = 'tex'
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <space>fmt <Plug>(coc-format)
 let g:coc_node_path = '~/.nvm/versions/node/v14.18.1/bin/node'
+
+" for windows
+nnoremap <C-q> <C-v>
