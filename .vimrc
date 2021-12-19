@@ -2,7 +2,7 @@
 set number "行番号の表示
 set title "編集中ファイル名の表示
 set showmatch "括弧入力時に対応する括弧を示す
-" set list "タブ、空白、改行を可視化
+"set list "タブ、空白、改行を可視化
 set visualbell "ビープ音を視覚表示
 set laststatus=2 "ステータスを表示
 set ruler "カーソル位置を表示
@@ -25,7 +25,9 @@ set ignorecase "大文字、小文字の区別をしない
 set smartcase "大文字が含まれている場合は区別する
 set wrapscan "検索時に最後まで行ったら最初に戻る
 set hlsearch "検索した文字を強調
-set incsearch "インクリメンタルサーチを有効にする "===== マウス設定 =====
+set incsearch "インクリメンタルサーチを有効にする
+
+"===== マウス設定 =====
 set mouse-=a
 set ttymouse=xterm2
 
