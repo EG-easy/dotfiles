@@ -4,7 +4,7 @@
 - node(for coc.vim)
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 nvm install v14.18.1
 ```
