@@ -1,0 +1,10 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'mattn/vim-goimports'
+on_ft = ['toml']
+hook_add = '''
+let g:goimports_simplify = 1
+'''
