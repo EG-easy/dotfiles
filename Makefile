@@ -6,9 +6,12 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 list: ## Show dot files in this repo
 	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
 
+echo:
+	@echo ${DOTFILES}
 deploy: ## Create symlink to home directory
 	@echo 'Copyright (c) 2019 EG-easy All Rights Reserved.'
 	@echo '==> Start to deploy dotfiles to home directory.'
 	@echo ''
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
-	@vim -c 'GoInstallBinaries' -c 'qa!'
+	@echo 'Now installing nvim settings'
+	@ln -sfnv $(abspath nvim) $(HOME)/.config/

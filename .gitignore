@@ -1,5 +1,5 @@
-.vim/dein/
-.vim/colors/
-.vim/undo/
+*/dein/
+*/colors/
+*/undo/
 
 .netrwhist
