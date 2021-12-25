@@ -95,3 +95,16 @@ repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = '''
+  ./install --all
+'''
+merged = '''
+0
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = ['fzf']
