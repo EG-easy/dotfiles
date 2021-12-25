@@ -3,6 +3,7 @@ set number
 set showmatch
 set cursorline
 syntax enable
+set t_Co=256
 
 "===indent=== 
 set autoindent

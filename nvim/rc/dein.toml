@@ -1,7 +1,6 @@
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 hook_add = '''
-
 "defx.vim settings
 autocmd VimEnter * execute 'Defx'
 nnoremap <silent> <C-e> :<C-u> Defx <CR>
