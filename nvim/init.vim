@@ -17,10 +17,6 @@ set wrapscan
 set hlsearch
 set incsearch
 
-
-
-
-
 "===color scheme=== 
 let s:colorschemename =  'onehalfdark'
 let s:colorschemeURL =  'https://raw.githubusercontent.com/sonph/onehalf/master/vim/colors/onehalfdark.vim'
@@ -39,7 +35,6 @@ else
 endif
 
 "===dein initialze=== 
-"dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -75,9 +70,6 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-
-"End dein Scripts-------------------------
-
 
 "===key bindings=== 
 let mapleader = "\<Space>"
