@@ -117,3 +117,5 @@ let mapleader = "\<Space>"
 nnoremap <Leader>. :e ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>/ :e ~/.config/nvim/rc<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR>
+" markdown plugin
+nnoremap <silent> <leader>o :MarkdownPreview<CR>

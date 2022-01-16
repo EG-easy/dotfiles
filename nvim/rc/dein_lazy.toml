@@ -8,3 +8,10 @@ on_ft = ['go']
 hook_add = '''
 let g:goimports_simplify = 1
 '''
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['md', 'markdown', 'pandoc.markdown', 'rmd']
+build = '''
+sh -c "cd app && yarn install"
+'''
