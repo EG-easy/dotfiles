@@ -15,3 +15,10 @@ on_ft = ['md', 'markdown', 'pandoc.markdown', 'rmd']
 build = '''
 sh -c "cd app && yarn install"
 '''
+
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+on_ft = ['javascript', 'javascript.jsx','typescript']
+build = '''
+make install
+'''
