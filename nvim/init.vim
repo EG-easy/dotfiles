@@ -11,6 +11,7 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+filetype indent on
 
 "===search=== 
 set ignorecase
@@ -18,6 +19,12 @@ set smartcase
 set wrapscan
 set hlsearch
 set incsearch
+
+"===file===
+set fileencodings=utf-8,sjis,cp932
+set fileformats=unix,dos,mac
+set nofixendofline
+set filetype=html
 
 "===color scheme=== 
 let s:colorschemename =  'molokai'
