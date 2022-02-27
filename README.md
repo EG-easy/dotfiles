@@ -3,7 +3,11 @@
 
 ## NeoVim settings
 ### Install dependecies
+- use neovim +0.6.1+
+
 ```
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt update
 apt install neovim ripgrep -y
 ```
 
