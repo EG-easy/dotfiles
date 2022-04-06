@@ -202,3 +202,9 @@ call denite#custom#action('source/file', 'test',
       \ {context -> execute('let g:bar = 1')})
 
 '''
+
+[[plugins]]
+repo = 'APZelos/blamer.nvim'
+hook_add = '''
+let g:blamer_enabled = 1
+'''
