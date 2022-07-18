@@ -11,38 +11,21 @@ sudo apt update
 apt install neovim ripgrep -y
 ```
 
-### Lsp Settings
-```
-:LspInstallServer
-```
-
-## Vim settings
-**require**
-- node(for coc.vim)
-
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-source ~/.bashrc
-nvm install v14.18.1
-```
-
-### LSP Setting
-install javascript/typescript language server with coc.
-```
-:CocInstall coc-tsserver
-```
-
-ref: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
-
-## How To Start
+### How To Start
 
 ```sh
 git clone https://github.com/EG-easy/dotfiles.git
 cd dotfiles
 make deploy
+source ~/.bashrc
 ```
 
-## Dein plugin update
+### Lsp Settings
+```
+:LspInstallServer
+```
+
+### Dein plugin update
 ```vim
 :call dein#update()
 ```
@@ -54,7 +37,6 @@ Set below values in `.vimrc` or `init.vim`
 let s:colorschemename =  ''
 let s:colorschemeURL =  ''
 ```
-
 
 ## troubleShooting
 
