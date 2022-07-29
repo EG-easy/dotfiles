@@ -208,3 +208,6 @@ repo = 'APZelos/blamer.nvim'
 hook_add = '''
 let g:blamer_enabled = 1
 '''
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
