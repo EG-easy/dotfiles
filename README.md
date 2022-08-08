@@ -21,13 +21,31 @@ source ~/.bashrc
 ```
 
 ### Lsp Settings
-```
+```vim
 :LspInstallServer
+```
+
+```vim
+:LspStatus
 ```
 
 ### Dein plugin update
 ```vim
 :call dein#update()
+```
+
+delete cache
+```vim
+:call dein#recache_runtimepath()
+```
+
+### ALE Settings
+```vim
+:AleInfo
+```
+
+```vim
+:ALEDetail
 ```
 
 ## Change Color Scheme

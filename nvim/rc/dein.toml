@@ -76,7 +76,11 @@ let g:airline_powerline_fonts = 1
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
+hook_add = '''
+let g:ale_linters = { 'javascript': ['eslint'] }
+let g:ale_disable_lsp = 1
+'''
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
