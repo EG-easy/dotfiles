@@ -72,6 +72,8 @@ if dein#load_state(s:dein_dir)
 
   call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
 
+  call dein#remote_plugins()
+
   call dein#end()
   call dein#save_state()
 endif
