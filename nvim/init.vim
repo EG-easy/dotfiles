@@ -2,7 +2,6 @@
 set number
 set showmatch
 set cursorline
-syntax enable
 set t_Co=256
 
 "===indent=== 
@@ -11,7 +10,6 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
-filetype indent on
 
 "===search=== 
 set ignorecase
@@ -71,8 +69,6 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
 
   call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
-
-  call dein#remote_plugins()
 
   call dein#end()
   call dein#save_state()
