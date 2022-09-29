@@ -133,3 +133,7 @@ nnoremap <silent> <leader>o :MarkdownPreview<CR>
 nnoremap <silent> <leader>j :JsDoc<CR>
 " Denite plugin
 nnoremap <silent> <leader>dg :Denite grep<CR>
+
+" move among buffers with CTRL
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
