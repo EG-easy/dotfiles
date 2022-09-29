@@ -131,3 +131,5 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <silent> <leader>o :MarkdownPreview<CR>
 " jsDoc plugin
 nnoremap <silent> <leader>j :JsDoc<CR>
+" Denite plugin
+nnoremap <silent> <leader>dg :Denite grep<CR>
