@@ -217,3 +217,8 @@ build = '''
 sh -c "cd app && yarn install"
 '''
 
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+let g:winresizer_start_key = '<C-T>'
+'''
