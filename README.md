@@ -48,6 +48,11 @@ delete cache
 :ALEDetail
 ```
 
+### Denite grep
+
+`q`: quit
+
+
 ## Change Color Scheme
 Set below values in `.vimrc` or `init.vim`
 
