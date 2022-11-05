@@ -15,9 +15,3 @@ hook_add = '''
 let g:goimports_simplify = 1
 '''
 
-[[plugins]]
-repo = 'heavenshell/vim-jsdoc'
-on_ft = ['javascript', 'javascript.jsx','typescript']
-build = '''
-make install
-'''
