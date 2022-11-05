@@ -241,3 +241,10 @@ repo = 'simeji/winresizer'
 hook_add = '''
 let g:winresizer_start_key = '<C-T>'
 '''
+
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+on_ft = ['javascript', 'javascript.jsx','typescript']
+build = '''
+make install
+'''
