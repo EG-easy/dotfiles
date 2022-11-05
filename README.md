@@ -52,6 +52,11 @@ delete cache
 
 `q`: quit
 
+### jsdoc
+
+```sh
+cd ~/dotfiles/nvim/dein/repos/github.com/heavenshell/vim-jsdoc && make clear && make install
+```
 
 ## Change Color Scheme
 Set below values in `.vimrc` or `init.vim`
