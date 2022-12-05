@@ -8,7 +8,7 @@
 ```
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
-apt install neovim ripgrep -y
+apt install build-essential neovim ripgrep -y
 ```
 
 ### How To Start
