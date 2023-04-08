@@ -248,3 +248,6 @@ on_ft = ['javascript', 'javascript.jsx','typescript']
 build = '''
 make install
 '''
+
+[[plugins]]
+repo = 'github/copilot.vim'
