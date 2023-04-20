@@ -28,6 +28,12 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 ```
 
+### copy to clipboard
+select with visual mode
+```
+"+y
+```
+
 ### move between terminal and vim
 ```
 Ctrl+Z
