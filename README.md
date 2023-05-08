@@ -3,12 +3,20 @@
 
 ## NeoVim settings
 ### Install dependecies
-- use neovim v0.7.2+
+
+Check Release Page: https://github.com/neovim/neovim/releases/tag/stable
+
+- use neovim v0.9.0
 
 ```
-sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
-apt install build-essential neovim ripgrep -y
+apt install build-essential python3-neovim ripgrep -y
+
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+cp ./nvim-linux64/bin/nvim /usr/bin/nvim
+
+nvim --version
 ```
 
 ### How To Start
