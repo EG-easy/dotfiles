@@ -249,5 +249,5 @@ build = '''
 make install
 '''
 
-[[plugins]]
-repo = 'github/copilot.vim'
+#[[plugins]]
+#repo = 'github/copilot.vim'
